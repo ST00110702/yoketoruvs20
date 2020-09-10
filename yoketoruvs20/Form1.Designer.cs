@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.StartButtom = new System.Windows.Forms.Button();
             this.copyrightlabel = new System.Windows.Forms.Label();
             this.timelabel = new System.Windows.Forms.Label();
             this.leftlabel = new System.Windows.Forms.Label();
             this.highscorelabel = new System.Windows.Forms.Label();
-            this.GAMEOVERlabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.gameoverlabel = new System.Windows.Forms.Label();
             this.clearlabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.titlebottom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Gothic Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(175, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 60);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "よけとる V２０２０";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Adobe Gothic Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLabel.Location = new System.Drawing.Point(175, 121);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(450, 60);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "よけとる V２０２０";
             // 
             // StartButtom
             // 
@@ -99,50 +101,54 @@
             this.highscorelabel.TabIndex = 5;
             this.highscorelabel.Text = "HighScore 1000";
             // 
-            // GAMEOVERlabel
+            // gameoverlabel
             // 
-            this.GAMEOVERlabel.AutoSize = true;
-            this.GAMEOVERlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.GAMEOVERlabel.Location = new System.Drawing.Point(259, 133);
-            this.GAMEOVERlabel.Name = "GAMEOVERlabel";
-            this.GAMEOVERlabel.Size = new System.Drawing.Size(282, 48);
-            this.GAMEOVERlabel.TabIndex = 6;
-            this.GAMEOVERlabel.Text = "GAME OVER";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(329, 365);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 37);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "タイトルへ";
+            this.gameoverlabel.AutoSize = true;
+            this.gameoverlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.gameoverlabel.Location = new System.Drawing.Point(259, 201);
+            this.gameoverlabel.Name = "gameoverlabel";
+            this.gameoverlabel.Size = new System.Drawing.Size(282, 48);
+            this.gameoverlabel.TabIndex = 6;
+            this.gameoverlabel.Text = "GAME OVER";
             // 
             // clearlabel
             // 
             this.clearlabel.AutoSize = true;
             this.clearlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clearlabel.Location = new System.Drawing.Point(328, 133);
+            this.clearlabel.Location = new System.Drawing.Point(328, 201);
             this.clearlabel.Name = "clearlabel";
             this.clearlabel.Size = new System.Drawing.Size(165, 48);
             this.clearlabel.TabIndex = 8;
             this.clearlabel.Text = "CLEAR";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // titlebottom
+            // 
+            this.titlebottom.Location = new System.Drawing.Point(378, 350);
+            this.titlebottom.Name = "titlebottom";
+            this.titlebottom.Size = new System.Drawing.Size(75, 23);
+            this.titlebottom.TabIndex = 9;
+            this.titlebottom.Text = "button1";
+            this.titlebottom.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.titlebottom);
             this.Controls.Add(this.clearlabel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.GAMEOVERlabel);
+            this.Controls.Add(this.gameoverlabel);
             this.Controls.Add(this.highscorelabel);
             this.Controls.Add(this.leftlabel);
             this.Controls.Add(this.timelabel);
             this.Controls.Add(this.copyrightlabel);
             this.Controls.Add(this.StartButtom);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.titleLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -152,15 +158,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button StartButtom;
         private System.Windows.Forms.Label copyrightlabel;
         private System.Windows.Forms.Label timelabel;
         private System.Windows.Forms.Label leftlabel;
         private System.Windows.Forms.Label highscorelabel;
-        private System.Windows.Forms.Label GAMEOVERlabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label gameoverlabel;
         private System.Windows.Forms.Label clearlabel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button titlebottom;
     }
 }
 
