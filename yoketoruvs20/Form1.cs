@@ -55,7 +55,7 @@ namespace yoketoruvs20
 
                 case State.Game:
                     titleLabel.Visible = false;
-                    StartButtom.vi
+                    StartButtom.Visible = false;
 
 
             }
