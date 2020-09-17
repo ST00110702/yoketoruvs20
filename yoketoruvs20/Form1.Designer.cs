@@ -60,6 +60,7 @@
             this.StartButtom.TabIndex = 1;
             this.StartButtom.Text = "START";
             this.StartButtom.UseVisualStyleBackColor = true;
+            this.StartButtom.Click += new System.EventHandler(this.StartButtom_Click);
             // 
             // copyrightlabel
             // 
@@ -95,7 +96,7 @@
             // 
             this.highscorelabel.AutoSize = true;
             this.highscorelabel.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.highscorelabel.Location = new System.Drawing.Point(276, 221);
+            this.highscorelabel.Location = new System.Drawing.Point(276, 254);
             this.highscorelabel.Name = "highscorelabel";
             this.highscorelabel.Size = new System.Drawing.Size(248, 35);
             this.highscorelabel.TabIndex = 5;
@@ -105,21 +106,22 @@
             // 
             this.gameoverlabel.AutoSize = true;
             this.gameoverlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.gameoverlabel.Location = new System.Drawing.Point(259, 201);
+            this.gameoverlabel.Location = new System.Drawing.Point(259, 126);
             this.gameoverlabel.Name = "gameoverlabel";
             this.gameoverlabel.Size = new System.Drawing.Size(282, 48);
             this.gameoverlabel.TabIndex = 6;
             this.gameoverlabel.Text = "GAME OVER";
+            this.gameoverlabel.Click += new System.EventHandler(this.gameoverlabel_Click);
             // 
             // clearlabel
             // 
             this.clearlabel.AutoSize = true;
             this.clearlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clearlabel.Location = new System.Drawing.Point(328, 201);
+            this.clearlabel.Location = new System.Drawing.Point(248, 133);
             this.clearlabel.Name = "clearlabel";
-            this.clearlabel.Size = new System.Drawing.Size(165, 48);
+            this.clearlabel.Size = new System.Drawing.Size(306, 48);
             this.clearlabel.TabIndex = 8;
-            this.clearlabel.Text = "CLEAR";
+            this.clearlabel.Text = "GAME CLEAR";
             // 
             // timer1
             // 
@@ -128,12 +130,14 @@
             // 
             // titlebottom
             // 
-            this.titlebottom.Location = new System.Drawing.Point(378, 350);
+            this.titlebottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.titlebottom.Location = new System.Drawing.Point(295, 355);
             this.titlebottom.Name = "titlebottom";
-            this.titlebottom.Size = new System.Drawing.Size(75, 23);
+            this.titlebottom.Size = new System.Drawing.Size(211, 56);
             this.titlebottom.TabIndex = 9;
-            this.titlebottom.Text = "button1";
+            this.titlebottom.Text = "title";
             this.titlebottom.UseVisualStyleBackColor = true;
+            this.titlebottom.Click += new System.EventHandler(this.titlebottom_Click);
             // 
             // Form1
             // 
