@@ -41,6 +41,7 @@ namespace yoketoruvs20
         State currentState = State.None;
         State nextState = State.Title;
 
+        const int SpeedMax = 20;
         int[] vx = new int[ChrMax];
         int[] vy = new int[ChrMax];
 
