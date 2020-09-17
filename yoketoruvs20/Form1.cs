@@ -41,6 +41,10 @@ namespace yoketoruvs20
         State currentState = State.None;
         State nextState = State.Title;
 
+        int[] vx = new int[ChrMax];
+        int[] vy = new int[ChrMax];
+
+
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(int vKey);
 
@@ -133,7 +137,6 @@ namespace yoketoruvs20
                     }
 
                     break;
-
 
                 case State.Gameover:
                     gameoverlabel.Visible = true;
