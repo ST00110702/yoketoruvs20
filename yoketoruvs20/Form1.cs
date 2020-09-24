@@ -27,8 +27,10 @@ namespace yoketoruvs20
         const string PlayerTest = "(-.-)";
         const string EnemyTest = "🔶";
         const string ItemTest = "★";
-
+        
         static Random rand = new Random();
+
+        int itemCount;
 
         enum State
         {
@@ -131,14 +133,24 @@ namespace yoketoruvs20
 
 
                 //当たり判定
-                if(   (mp.X<=chrs[i].Left)
-                    &&(mp.X< chrs[i].Right)
-                    &&(mp.Y>=chrs[i].Top)
-                    &&(mp.X<chrs[i].Bottom)
+                if( (chrs[i].Left<=mp.X)
+                 && (chrs[i].Top<=mp.X)
+                 && (chrs[i].Right>=mp.X)
+                 && (chrs[i].Bottom>= mp.X)
                     )
-                {
-                    MessageBox.Show("重なった");
-                }
+                    if(i<ItemIndex)
+                    {
+                        nextState = State.Gameover;
+                    }
+                    else
+                    {
+                        vx[i] = 0;
+                        vy[i] = 0;
+                        chrs[i].Top = -1;
+                        chrs[i].Left = -1;
+                        //chrs[i].Visible = false;
+
+                    }
 
              }
 
