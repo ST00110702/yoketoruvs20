@@ -102,10 +102,37 @@ namespace yoketoruvs20
         void UpdateGame()
         {
             Point mp = PointToClient(MousePosition);
-            chrs[0].Left = mp.X;
-            chrs[0].Top = mp.Y;
+            chrs[0].Left = mp.X-chrs[0].Width/2;
+            chrs[0].Top = mp.Y-chrs[0].Height/2;
 
-        }
+            for (int i = EnemyIndex; i < ChrMax; i++) 
+            {
+                chrs[i].Left += vx[i];
+                chrs[i].Top += vy[i];
+                if (chrs[i].Left < 0) 
+                {
+                    vx[i] = Math.Abs(vx[i]);
+                }
+                if (chrs[i].Top < 0) 
+                {
+                    vy[i] = Math.Abs(vy[i]);
+                }
+                if (chrs[i].Right > ClientSize.Width) 
+                {
+                    vx[i] = -Math.Abs(vx[i]);
+                }
+                if (chrs[i].Bottom > ClientSize.Height) 
+                {
+                    vy[i] = -Math.Abs(vy[i]);
+
+                
+                 }
+
+
+             }
+
+         }
+
 
         void initProc()
         {
@@ -123,6 +150,7 @@ namespace yoketoruvs20
                     gameoverlabel.Visible = false;
                     clearlabel.Visible = false;
                     titlebottom.Visible = false;
+                    for (int i = 0; i < ChrMax; i++) chrs[i].Visible = false;
                     break;
 
                 case State.Game:
@@ -130,11 +158,13 @@ namespace yoketoruvs20
                     StartButtom.Visible = false;
                     copyrightlabel.Visible = false;
                     highscorelabel.Visible = false;
-
-                    for(int i=EnemyIndex;i<ChrMax;i++)
+                    for (int i = 0; i < ChrMax; i++) chrs[i].Visible = true;
+                    for (int i=EnemyIndex;i<ChrMax;i++)
                     {
                         chrs[i].Left = rand.Next(ClientSize.Width - chrs[i].Width);
                         chrs[i].Top = rand.Next(ClientSize.Height - chrs[i].Height);
+                        vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
+                        vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
 
                     break;
