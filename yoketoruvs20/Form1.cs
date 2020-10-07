@@ -121,6 +121,7 @@ namespace yoketoruvs20
 
             if (time <= 0) nextState = State.Gameover;
 
+            leftlabel.Text = "★:" + itemCount;
 
             for (int i = EnemyIndex; i < ChrMax; i++) 
             {
@@ -235,6 +236,11 @@ namespace yoketoruvs20
         private void titlebottom_Click(object sender, EventArgs e)
         {
             nextState = State.Title;
+        }
+
+        private void leftlabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
