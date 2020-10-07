@@ -27,10 +27,16 @@ namespace yoketoruvs20
         const string PlayerTest = "(-.-)";
         const string EnemyTest = "🔶";
         const string ItemTest = "★";
-        
-        static Random rand = new Random();
 
         int itemCount;
+        bool[] getItem = new bool[ChrMax];
+
+        const int TimeMax = 300;
+        int time;
+
+        int highscore = 0;
+        
+        static Random rand = new Random();
 
         enum State
         {
@@ -108,6 +114,14 @@ namespace yoketoruvs20
             chrs[0].Left = mp.X-chrs[0].Width/2;
             chrs[0].Top = mp.Y-chrs[0].Height/2;
 
+            if (itemCount <= 0) nextState = State.Clear;
+
+            time--;
+            timelabel.Text = "TIME" + time;
+
+            if (time <= 0) nextState = State.Gameover;
+
+
             for (int i = EnemyIndex; i < ChrMax; i++) 
             {
                 chrs[i].Left += vx[i];
@@ -127,31 +141,25 @@ namespace yoketoruvs20
                 if (chrs[i].Bottom > ClientSize.Height) 
                 {
                     vy[i] = -Math.Abs(vy[i]);
-
-                
                  }
 
 
                 //当たり判定
                 if( (chrs[i].Left<=mp.X)
-                 && (chrs[i].Top<=mp.X)
+                 && (chrs[i].Top<=mp.Y)
                  && (chrs[i].Right>=mp.X)
-                 && (chrs[i].Bottom>= mp.X)
+                 && (chrs[i].Bottom>= mp.Y)
                     )
                     if(i<ItemIndex)
                     {
                         nextState = State.Gameover;
                     }
-                    else
+                    else if(!getItem[i])
                     {
-                        vx[i] = 0;
-                        vy[i] = 0;
-                        chrs[i].Top = -1;
-                        chrs[i].Left = -1;
-                        //chrs[i].Visible = false;
-
+                        getItem[i] = true;
+                        chrs[i].Visible = false;
+                        itemCount--;
                     }
-
              }
 
          }
@@ -181,6 +189,13 @@ namespace yoketoruvs20
                     StartButtom.Visible = false;
                     copyrightlabel.Visible = false;
                     highscorelabel.Visible = false;
+
+                    itemCount = ItemMax;
+
+                    for (int i = 0; i < ChrMax; i++) getItem[i] = false;
+
+                    time = TimeMax;
+
                     for (int i = 0; i < ChrMax; i++) chrs[i].Visible = true;
                     for (int i=EnemyIndex;i<ChrMax;i++)
                     {
@@ -189,7 +204,6 @@ namespace yoketoruvs20
                         vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
-
                     break;
 
                 case State.Gameover:
@@ -201,6 +215,9 @@ namespace yoketoruvs20
                     clearlabel.Visible = true;
                     titlebottom.Visible = true;
                     highscorelabel.Visible = true;
+
+                    if (time > highscore) highscore = time;
+                    highscorelabel.Text = "HighScore" + highscore;
                     break;
             }
         }

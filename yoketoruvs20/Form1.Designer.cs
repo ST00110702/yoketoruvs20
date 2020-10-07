@@ -45,19 +45,21 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Adobe Gothic Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titleLabel.Location = new System.Drawing.Point(175, 121);
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLabel.Location = new System.Drawing.Point(233, 151);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(450, 60);
+            this.titleLabel.Size = new System.Drawing.Size(438, 69);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "よけとる V２０２０";
             // 
             // StartButtom
             // 
             this.StartButtom.Font = new System.Drawing.Font("HGPｺﾞｼｯｸE", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.StartButtom.Location = new System.Drawing.Point(295, 355);
+            this.StartButtom.Location = new System.Drawing.Point(393, 444);
+            this.StartButtom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartButtom.Name = "StartButtom";
-            this.StartButtom.Size = new System.Drawing.Size(211, 56);
+            this.StartButtom.Size = new System.Drawing.Size(281, 70);
             this.StartButtom.TabIndex = 1;
             this.StartButtom.Text = "START";
             this.StartButtom.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // 
             this.copyrightlabel.AutoSize = true;
             this.copyrightlabel.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.copyrightlabel.Location = new System.Drawing.Point(491, 414);
+            this.copyrightlabel.Location = new System.Drawing.Point(655, 518);
+            this.copyrightlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.copyrightlabel.Name = "copyrightlabel";
-            this.copyrightlabel.Size = new System.Drawing.Size(297, 27);
+            this.copyrightlabel.Size = new System.Drawing.Size(371, 34);
             this.copyrightlabel.TabIndex = 2;
             this.copyrightlabel.Text = "Copyright © 鈴木　智也";
             // 
@@ -77,19 +80,21 @@
             // 
             this.timelabel.AutoSize = true;
             this.timelabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timelabel.Location = new System.Drawing.Point(12, 9);
+            this.timelabel.Location = new System.Drawing.Point(16, 11);
+            this.timelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timelabel.Name = "timelabel";
-            this.timelabel.Size = new System.Drawing.Size(219, 48);
+            this.timelabel.Size = new System.Drawing.Size(274, 60);
             this.timelabel.TabIndex = 3;
-            this.timelabel.Text = "TIME：100";
+            this.timelabel.Text = "TIME：300";
             // 
             // leftlabel
             // 
             this.leftlabel.AutoSize = true;
             this.leftlabel.Font = new System.Drawing.Font("MS UI Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.leftlabel.Location = new System.Drawing.Point(665, 9);
+            this.leftlabel.Location = new System.Drawing.Point(887, 11);
+            this.leftlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.leftlabel.Name = "leftlabel";
-            this.leftlabel.Size = new System.Drawing.Size(123, 37);
+            this.leftlabel.Size = new System.Drawing.Size(155, 47);
             this.leftlabel.TabIndex = 4;
             this.leftlabel.Text = "★：１０";
             // 
@@ -97,9 +102,10 @@
             // 
             this.highscorelabel.AutoSize = true;
             this.highscorelabel.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.highscorelabel.Location = new System.Drawing.Point(276, 254);
+            this.highscorelabel.Location = new System.Drawing.Point(368, 318);
+            this.highscorelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.highscorelabel.Name = "highscorelabel";
-            this.highscorelabel.Size = new System.Drawing.Size(248, 35);
+            this.highscorelabel.Size = new System.Drawing.Size(307, 44);
             this.highscorelabel.TabIndex = 5;
             this.highscorelabel.Text = "HighScore 1000";
             // 
@@ -107,9 +113,10 @@
             // 
             this.gameoverlabel.AutoSize = true;
             this.gameoverlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.gameoverlabel.Location = new System.Drawing.Point(259, 126);
+            this.gameoverlabel.Location = new System.Drawing.Point(345, 158);
+            this.gameoverlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gameoverlabel.Name = "gameoverlabel";
-            this.gameoverlabel.Size = new System.Drawing.Size(282, 48);
+            this.gameoverlabel.Size = new System.Drawing.Size(353, 60);
             this.gameoverlabel.TabIndex = 6;
             this.gameoverlabel.Text = "GAME OVER";
             this.gameoverlabel.Click += new System.EventHandler(this.gameoverlabel_Click);
@@ -118,9 +125,10 @@
             // 
             this.clearlabel.AutoSize = true;
             this.clearlabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clearlabel.Location = new System.Drawing.Point(248, 133);
+            this.clearlabel.Location = new System.Drawing.Point(331, 166);
+            this.clearlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.clearlabel.Name = "clearlabel";
-            this.clearlabel.Size = new System.Drawing.Size(306, 48);
+            this.clearlabel.Size = new System.Drawing.Size(383, 60);
             this.clearlabel.TabIndex = 8;
             this.clearlabel.Text = "GAME CLEAR";
             // 
@@ -132,9 +140,10 @@
             // titlebottom
             // 
             this.titlebottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.titlebottom.Location = new System.Drawing.Point(295, 355);
+            this.titlebottom.Location = new System.Drawing.Point(393, 444);
+            this.titlebottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.titlebottom.Name = "titlebottom";
-            this.titlebottom.Size = new System.Drawing.Size(211, 56);
+            this.titlebottom.Size = new System.Drawing.Size(281, 70);
             this.titlebottom.TabIndex = 9;
             this.titlebottom.Text = "title";
             this.titlebottom.UseVisualStyleBackColor = true;
@@ -144,18 +153,19 @@
             // 
             this.templabel.AutoSize = true;
             this.templabel.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.templabel.Location = new System.Drawing.Point(41, 125);
+            this.templabel.Location = new System.Drawing.Point(55, 156);
+            this.templabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.templabel.Name = "templabel";
-            this.templabel.Size = new System.Drawing.Size(47, 33);
+            this.templabel.Size = new System.Drawing.Size(57, 40);
             this.templabel.TabIndex = 10;
             this.templabel.Text = "★";
             this.templabel.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.templabel);
             this.Controls.Add(this.titlebottom);
             this.Controls.Add(this.clearlabel);
@@ -166,6 +176,7 @@
             this.Controls.Add(this.copyrightlabel);
             this.Controls.Add(this.StartButtom);
             this.Controls.Add(this.titleLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
