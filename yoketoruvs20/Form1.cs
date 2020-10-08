@@ -125,8 +125,11 @@ namespace yoketoruvs20
 
             for (int i = EnemyIndex; i < ChrMax; i++) 
             {
+             //他例：if(!chrs[i].Visible)continue;
+
                 chrs[i].Left += vx[i];
                 chrs[i].Top += vy[i];
+
                 if (chrs[i].Left < 0) 
                 {
                     vx[i] = Math.Abs(vx[i]);
